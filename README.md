@@ -19,11 +19,19 @@ export default defineConfig({
 
 First you can fire it up in `bun dev` to see how it should behave normally.
 
-To see how it runs on Lambda, you can visit [https://d38gsb5k8jley6.cloudfront.net](https://d38gsb5k8jley6.cloudfront.net) to see this code deployed.
+To see how it runs on Lambda with streaming, you can visit [https://stream-test.mckamyk.io](https://stream-test.mckamyk.io) to see this code deployed.
+
+You can see a non-streaming version deployed at [https://nonstream-test.mckamyk.io](https://nonstream-test.mckamyk.io)
 
 ## What to look out for.
 
 When you click `Set the cookie` look for the POST in the network dev tools, you should see `"set-cookie: test=<current date>"`. While in dev mode, this works fine. When deployed, it does not.
+
+Here's an image with the response headers from the POST when running locally
+![](docs/local.png)
+
+And here's one deployed with streaming enabled.
+![](docs/deployed.png)
 
 Same when you click `Remove Cookie`
 

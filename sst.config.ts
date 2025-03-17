@@ -9,6 +9,8 @@ export default $config({
     }
   },
   async run() {
-    new sst.aws.TanstackStart('MyWeb')
+    new sst.aws.TanstackStart('MyWeb', {
+      domain: 'stream-test.mckamyk.io',
+    })
   },
 })
