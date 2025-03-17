@@ -23,6 +23,21 @@ To see how it runs on Lambda with streaming, you can visit [https://stream-test.
 
 You can see a non-streaming version deployed at [https://nostream-test.mckamyk.io](https://nostream-test.mckamyk.io)
 
+If you want to deploy the non-streaming version,
+
+```ts
+export default defineConfig({
+  server: {
+    preset: 'aws-lambda',
+    // awsLambda: {
+    //   streaming: true,
+    // },
+  },
+})
+```
+
+and redeploy. You may want to `bun sst deploy --stage non-streaming` to put it in a separate namespace. You can remove it by `bun sst remove --stage non-streaming`
+
 ## What to look out for.
 
 When you click `Set the cookie` look for the POST in the network dev tools, you should see `"set-cookie: test=<current date>"`. While in dev mode, this works fine. When deployed, it does not.
