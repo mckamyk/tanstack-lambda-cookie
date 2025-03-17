@@ -21,7 +21,7 @@ First you can fire it up in `bun dev` to see how it should behave normally.
 
 To see how it runs on Lambda with streaming, you can visit [https://stream-test.mckamyk.io](https://stream-test.mckamyk.io) to see this code deployed.
 
-You can see a non-streaming version deployed at [https://nonstream-test.mckamyk.io](https://nonstream-test.mckamyk.io)
+You can see a non-streaming version deployed at [https://nostream-test.mckamyk.io](https://nostream-test.mckamyk.io)
 
 ## What to look out for.
 
